@@ -120,7 +120,7 @@ If you use this code or the synthesis framework, please cite the paper:
 @article{bandara2026bridging,
   title   = {Bridging the Gap: Supervised MRI Motion Artifact Correction via Data Synthesis: A CBAM-U-Net Approach},
   author  = {Bandara, U.Y.G.M.K. and Herath, W.M.V.S. and Dissanayake, Maheshi B. and Weerasinghe, S.C.},
-  journal = {Medical Image Analysis},
+  journal = {Biomedical Signal Processing and Control},
   year    = {2026},
   note    = {Under review}
 }
