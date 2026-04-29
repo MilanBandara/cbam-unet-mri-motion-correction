@@ -1,0 +1,48 @@
+# Default hyper-parameters and paths for the CBAM-U-Net pipeline.
+# These mirror the argparse defaults in scripts/{synthesize_data,train,evaluate}.py
+# and reflect the configuration used in the paper. They are provided here as a
+# single source of truth that can be loaded by your own driver scripts; the
+# bundled CLIs do not require this file to run.
+
+paths:
+  mrart_root: /path/to/mrart
+  train_subdir: MRART_training_data/Original
+  val_subdir: MRART_val_data/Original
+  data_root: data
+  output_dir: checkpoints
+  results_dir: results
+
+image:
+  image_size: 256
+  channels: 1
+
+training:
+  batch_size: 10
+  learning_rate: 0.001
+  epochs: 100
+  loss: mse
+  optimizer: adam
+  save_every_n: 5
+  seed: 0
+
+synthesis:
+  motion_type: both        # one of {translation, rotation, both}
+  shift_x: 2
+  shift_y: 0
+  angle: 3                 # degrees
+  number_of_lines: 50      # phase-encoding columns swapped
+  width: 3                 # band width per swap (columns)
+  region: random           # one of {random, central, peripheral, mixed}
+  seed: 0
+
+evaluation:
+  max_val_pairs: 250
+  test_subdirs:
+    original: Original
+    head_motion_1: head_motion_1
+    head_motion_2: head_motion_2
+
+wandb:
+  enabled: false
+  project: train_final_model_with_CBAM
+  run_name: train_final_model_with_CBAM-run-1

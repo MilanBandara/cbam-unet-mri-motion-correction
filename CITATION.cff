@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "CBAM-U-Net for MRI Motion Artifact Correction"
+abstract: >-
+  Reference implementation of a physics-informed CBAM-enhanced U-Net for
+  retrospective MRI motion artifact correction, together with a stochastic
+  k-space perturbation framework that synthesises paired training data from
+  the MR-ART repository. Accompanies the paper "Bridging the Gap: Supervised
+  MRI Motion Artifact Correction via Data Synthesis: A CBAM-U-Net Approach".
+authors:
+  - family-names: Bandara
+    given-names: U.Y.G.M.K.
+    affiliation: "Department of Electrical and Electronic Engineering, University of Peradeniya"
+    email: e18041@eng.pdn.ac.lk
+  - family-names: Herath
+    given-names: W.M.V.S.
+    affiliation: "Department of Electrical and Electronic Engineering, University of Peradeniya"
+    email: e18134@eng.pdn.ac.lk
+  - family-names: Dissanayake
+    given-names: Maheshi B.
+    affiliation: "Department of Electrical and Electronic Engineering, University of Peradeniya"
+    email: maheshid@eng.pdn.ac.lk
+  - family-names: Weerasinghe
+    given-names: S.C.
+    affiliation: "Teaching Hospital Peradeniya"
+    email: sajithaw@yahoo.com
+keywords:
+  - MRI
+  - Motion Artifact Simulation
+  - Motion Artifact Removal
+  - U-Net
+  - CBAM attention
+license: MIT
+version: 0.1.0
+date-released: 2026-04-29
+preferred-citation:
+  type: article
+  title: "Bridging the Gap: Supervised MRI Motion Artifact Correction via Data Synthesis: A CBAM-U-Net Approach"
+  authors:
+    - family-names: Bandara
+      given-names: U.Y.G.M.K.
+    - family-names: Herath
+      given-names: W.M.V.S.
+    - family-names: Dissanayake
+      given-names: Maheshi B.
+    - family-names: Weerasinghe
+      given-names: S.C.
+  journal: "Medical Image Analysis"
+  year: 2026
+  notes: "Under review"
