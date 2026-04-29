@@ -33,7 +33,7 @@ data/train/{Original,Corrupted}/*.png
 data/val/{Original,Corrupted}/*.png
 ```
 
-## 2. Train the CBAM-U-Net
+## 2. Train MR²-AttUNet
 
 ```bash
 python scripts/train.py \

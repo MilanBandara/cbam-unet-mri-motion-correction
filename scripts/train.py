@@ -1,4 +1,4 @@
-"""Train the CBAM-U-Net for MRI motion artifact correction.
+"""Train MR^2-AttUNet (multi-resolution CBAM U-Net) for MRI motion artifact correction.
 
 Example::
 

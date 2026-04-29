@@ -1,9 +1,13 @@
-"""CBAM-U-Net architecture for MRI motion artifact correction.
+"""MR^2-AttUNet architecture for MRI motion artifact correction.
 
 Implements the multi-resolution U-Net backbone with a Convolutional Block
 Attention Module (CBAM) inserted in each encoder block, as described in
 the accompanying paper. The image input is downsampled at three resolutions
 and re-injected as additional context into successive encoder stages.
+
+The model is branded MR^2-AttUNet (Motion Removal x Multi-Resolution Attention
+U-Net) in code-facing artefacts; the paper refers to the same architecture as
+the "CBAM-U-Net" approach.
 """
 
 from __future__ import annotations
@@ -146,7 +150,7 @@ def Output_Block(inputs, activation: str = "sigmoid", padding: str = "same"):
 
 
 def artifact_removal_model(image_resolution: int = 256, kernel_size=(3, 3)) -> Model:
-    """Build the multi-resolution CBAM-U-Net.
+    """Build MR^2-AttUNet, the multi-resolution CBAM U-Net.
 
     Parameters
     ----------
@@ -171,4 +175,4 @@ def artifact_removal_model(image_resolution: int = 256, kernel_size=(3, 3)) -> M
 
     output = Output_Block(x)
 
-    return Model(inputs=input_1, outputs=output, name="cbam_unet")
+    return Model(inputs=input_1, outputs=output, name="mr2_attunet")

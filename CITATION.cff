@@ -1,8 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the accompanying paper."
-title: "CBAM-U-Net for MRI Motion Artifact Correction"
+title: "MR2-AttUNet: Multi-Resolution CBAM Attention U-Net for MRI Motion Artifact Correction"
 abstract: >-
-  Reference implementation of a physics-informed CBAM-enhanced U-Net for
+  Reference implementation of MR2-AttUNet (Motion Removal x Multi-Resolution
+  Attention U-Net), a physics-informed CBAM-enhanced multi-resolution U-Net for
   retrospective MRI motion artifact correction, together with a stochastic
   k-space perturbation framework that synthesises paired training data from
   the MR-ART repository. Accompanies the paper "Bridging the Gap: Supervised

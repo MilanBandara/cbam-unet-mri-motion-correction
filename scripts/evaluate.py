@@ -1,4 +1,4 @@
-"""Evaluate a trained CBAM-U-Net on validation pairs and the MR-ART real-motion test set.
+"""Evaluate a trained MR^2-AttUNet on validation pairs and the MR-ART real-motion test set.
 
 Reproduces the quantitative tables in the paper:
 

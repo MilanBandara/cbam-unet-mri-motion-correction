@@ -1,14 +1,16 @@
-# Bridging the Gap: Supervised MRI Motion Artifact Correction via Data Synthesis — A CBAM-U-Net Approach
+# MR²-AttUNet — Bridging the Gap: Supervised MRI Motion Artifact Correction via Data Synthesis
 
-Reference implementation for the paper:
+Reference implementation of **MR²-AttUNet**, the multi-resolution CBAM U-Net introduced in the paper:
 
 > **Bridging the Gap: Supervised MRI Motion Artifact Correction via Data Synthesis: A CBAM-U-Net Approach**
 > U.Y.G.M.K. Bandara, W.M.V.S. Herath, Maheshi B. Dissanayake (Dept. of Electrical and Electronic Engineering, University of Peradeniya), and S.C. Weerasinghe (Teaching Hospital Peradeniya).
 > Submitted to *Medical Image Analysis*.
 
+The acronym stands for **M**otion **R**emoval × **M**ulti-**R**esolution **Att**ention **U**-**Net**.
+
 ## Overview
 
-Magnetic Resonance Imaging (MRI) is a cornerstone of clinical diagnostics but is frequently degraded by motion artifacts that hurt diagnostic accuracy and force costly re-scans. This work proposes a physics-informed, CBAM-enhanced U-Net for retrospective motion artifact correction:
+Magnetic Resonance Imaging (MRI) is a cornerstone of clinical diagnostics but is frequently degraded by motion artifacts that hurt diagnostic accuracy and force costly re-scans. This work proposes **MR²-AttUNet**, a physics-informed, CBAM-enhanced U-Net for retrospective motion artifact correction:
 
 - A **Convolutional Block Attention Module (CBAM)** is embedded in a modified, multi-resolution U-Net so the network dynamically prioritises spatially and channel-wise salient features, helping it localise non-local ghosting while preserving fine anatomical detail.
 - To overcome the lack of paired clinical data, we introduce a **stochastic k-space perturbation framework** that selectively corrupts phase-encoding lines in the frequency domain, generating high-fidelity paired training data from the [MR-ART](https://openneuro.org/datasets/ds004173) repository and bridging the sim-to-real gap.
@@ -30,7 +32,7 @@ cbam-unet-mri-motion-correction/
     synth/motion.py              # stochastic k-space motion synthesis
   scripts/
     synthesize_data.py           # generate paired train/val data from MR-ART
-    train.py                     # train the CBAM-U-Net (optional W&B)
+    train.py                     # train MR²-AttUNet (optional W&B)
     infer.py                     # run inference on an image or a folder
     evaluate.py                  # MSE/PSNR/SSIM on val + MR-ART real-motion test set
   notebooks/tutorial.ipynb       # slim, end-to-end smoke test
@@ -40,6 +42,8 @@ cbam-unet-mri-motion-correction/
   docs/architecture.md           # architecture description with diagram
   docs/reproducing_paper.md      # exact CLI invocations to reproduce the paper
 ```
+
+> Note on naming: MR²-AttUNet is the name we use for the model in this code release. The accompanying paper refers to the same architecture as the "CBAM-U-Net" approach. The Python package is imported as `cbam_unet`.
 
 ## Installation
 
@@ -70,7 +74,7 @@ python scripts/synthesize_data.py \
     --mrart-root /path/to/mrart \
     --out data/
 
-# 2. Train the CBAM-U-Net
+# 2. Train MR²-AttUNet
 python scripts/train.py \
     --train-dir data/train \
     --val-dir   data/val \
@@ -116,7 +120,7 @@ If you use this code or the synthesis framework, please cite the paper:
 @article{bandara2026bridging,
   title   = {Bridging the Gap: Supervised MRI Motion Artifact Correction via Data Synthesis: A CBAM-U-Net Approach},
   author  = {Bandara, U.Y.G.M.K. and Herath, W.M.V.S. and Dissanayake, Maheshi B. and Weerasinghe, S.C.},
-  journal = {Biomedical Signal Processing and Control},
+  journal = {Medical Image Analysis},
   year    = {2026},
   note    = {Under review}
 }

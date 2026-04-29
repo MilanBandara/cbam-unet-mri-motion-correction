@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "cbam-unet"
 version = "0.1.0"
-description = "CBAM-U-Net for supervised MRI motion artifact correction via k-space data synthesis."
+description = "MR2-AttUNet: multi-resolution CBAM attention U-Net for supervised MRI motion artifact correction via k-space data synthesis."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }

@@ -1,6 +1,6 @@
-# Architecture
+# Architecture — MR²-AttUNet
 
-The model implemented in [`src/cbam_unet/model.py`](../src/cbam_unet/model.py) is a multi-resolution U-Net augmented with a Convolutional Block Attention Module (CBAM) at each encoder stage. A grayscale MRI slice is consumed at three resolutions (full, 1/2, 1/4) and re-injected as additional context into successive encoder stages, while the decoder restores the original resolution via transposed convolutions and skip connections.
+The model implemented in [`src/cbam_unet/model.py`](../src/cbam_unet/model.py) — branded **MR²-AttUNet** (Motion Removal × Multi-Resolution Attention U-Net) — is a multi-resolution U-Net augmented with a Convolutional Block Attention Module (CBAM) at each encoder stage. A grayscale MRI slice is consumed at three resolutions (full, 1/2, 1/4) and re-injected as additional context into successive encoder stages, while the decoder restores the original resolution via transposed convolutions and skip connections.
 
 ## Block diagram
 

@@ -1,4 +1,4 @@
-"""Run CBAM-U-Net inference on a single image or a directory of PNGs.
+"""Run MR^2-AttUNet inference on a single image or a directory of PNGs.
 
 Examples::
 

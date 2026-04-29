@@ -1,4 +1,4 @@
-# Default hyper-parameters and paths for the CBAM-U-Net pipeline.
+# Default hyper-parameters and paths for the MR^2-AttUNet (CBAM multi-resolution U-Net) pipeline.
 # These mirror the argparse defaults in scripts/{synthesize_data,train,evaluate}.py
 # and reflect the configuration used in the paper. They are provided here as a
 # single source of truth that can be loaded by your own driver scripts; the
